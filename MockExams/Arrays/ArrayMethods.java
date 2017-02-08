@@ -1,32 +1,24 @@
-
 import java.util.*;
 
+public class ArrayMethods {
 
-public class ArrayMethods
-{
-	public static void main (String[] args)
-	{
+	public static void main (String[] args) {
 		arrayAsList();
 		arrayComparison();
 		arrayFill();
-		
 	}
 
-	public static void arrayFill()
-	{
+	public static void arrayFill() {
 		long l[] = new long[10];
-
-		//double d[] = (double[]) l; 		Arrays de tipos primitivos não fazem o casting.
+		//double d[] = (double[]) l;       Arrays de tipos primitivos não fazem o casting.
 
 		Arrays.fill(l, 3, 9, 12l);
-
 		List list = Arrays.asList(l);     //List não aceita parâmetro de tipo primitivo, int não funciona, só Integer. list<Integer> OK    list<int> NOK
 
-		System.out.println(" l " + Arrays.toString(l) );
+		System.out.println(" l " + Arrays.toString(l));
 	}
 
-	public static void arrayComparison()
-	{
+	public static void arrayComparison() {
 		String a[] = {"A", "B"};
 		String b[] = {"A", "B"};
 
@@ -38,8 +30,7 @@ public class ArrayMethods
 		System.out.println("\nla == lb [" + (la == lb) + "] la equals lb [" + la.equals(lb) + "]");
 	}
 
-	public static void arrayAsList()
-	{
+	public static void arrayAsList() {
 		String[] a = new String[10];
 
 		double randNumber = 0;
@@ -55,13 +46,6 @@ public class ArrayMethods
 		System.out.println("Array Saída [" + a[i] + "]");
 
 		System.out.println("\nLista Saída [" + list + "]");
-
 		System.out.println("\n randNumber [" + randNumber + "]");
-
 	}
-
 }
-
-
-
-
